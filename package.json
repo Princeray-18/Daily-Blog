@@ -1,0 +1,25 @@
+{
+  "name": "daily-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Princeray-18/Daily-Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Princeray-18/Daily-Blog/issues"
+  },
+  "homepage": "https://github.com/Princeray-18/Daily-Blog#readme",
+  "description": "",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-router-dom": "^7.9.0",
+    "router": "^2.2.0"
+  }
+}
