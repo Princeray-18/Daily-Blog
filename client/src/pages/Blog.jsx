@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Blog() {
-  return (
-    <div>
-      <h1>Blog</h1>
-    </div>
-  )
-}
+const Bloglist = () => {
+  return <div>Bloglist Component</div>;
+};
 
-export default Blog
+export default Bloglist;   // ✅ default export

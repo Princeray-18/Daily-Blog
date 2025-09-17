@@ -37,11 +37,12 @@ const Header = () => {
         </button>
       </form>
 
-      <img 
-        src={assets.gradientBackground} 
-        alt="" 
-        className='w-full h-80 object-cover rounded-lg mt-8' 
-      /> 
+      {/* <img
+  src="assets gra" // replace with your image URL
+  alt="Blog"
+  className="w-full h-80 object-cover rounded-lg mt-8"
+/> */}
+
     </div>
   )
 }
