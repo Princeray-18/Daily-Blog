@@ -1,23 +1,41 @@
-import React from "react";
-import { blogCategories } from "../assets/assets";
 
+import React, { useState } from "react";
+import { blog_data, blogCategories } from "../assets/assets";
+import {motion} from "motion/react"
+import Blogcard from "./Blogcard";
 const Bloglist = () => {
+  const [menu, setmenu] = useState("All");
+
   return (
     <div className="px-6 sm:px-12">
       {/* Categories */}
       <div className="flex justify-center gap-4 sm:gap-8 my-10 relative">
         {blogCategories.map((item, index) => (
           <div key={index} className="relative">
-            <button className="px-4 py-2 border rounded-lg hover:bg-primary/10 transition">
+            <button
+              onClick={() => setmenu(item)}
+              className={`cursor-pointer text-gray-500 ${
+                menu === item && "text-white px-4 pt-0.5"
+              }`}
+            >
               {item}
+              {menu === item && (
+                <motion.div layoutId='underline'
+                transition={{type:'spring',stiffness:500,damping:30}}
+                  className="absolute left-0 right-0 top-0 h-7 -z-10
+                  bg-primary rounded-full"
+                ></motion.div>
+              )}
             </button>
           </div>
         ))}
       </div>
 
       {/* Blog cards */}
-      <div>
-        {/* ---blog cards will go here--- */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4
+      gap-8 mb mx sm:mx16 xl:mx40'>
+        {blog_data.filter((blog)=> menu ==="All"? true:blog.category == menu ).
+         map((blog)=> <Blogcard key={blog.id}blog= {blog}/>)}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Bloglist from "../components/Bloglist";
+import Newssletter from "../components/Newssletter";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
 
       {/* Blog Categories + Blog cards */}
       <Bloglist/> 
+      <Newssletter/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Bloglist = () => {
-  return <div>Bloglist Component</div>;
+  return <div>Blog</div>;
 };
 
 export default Bloglist;   // ✅ default export
